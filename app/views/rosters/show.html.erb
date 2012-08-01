@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Username:</b>
+  <%= @roster.username %>
+</p>
+
+<p>
+  <b>Company name:</b>
+  <%= @roster.company_name %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @roster.address %>
+</p>
+
+<p>
+  <b>Phone number:</b>
+  <%= @roster.phone_number %>
+</p>
+
+
+<%= link_to 'Edit', edit_roster_path(@roster) %> |
+<%= link_to 'Back', rosters_path %>

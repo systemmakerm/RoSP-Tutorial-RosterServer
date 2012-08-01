@@ -1,0 +1,29 @@
+<h1>Listing rosters</h1>
+
+<table>
+  <tr>
+    <th>Username</th>
+    <th>Company name</th>
+    <th>Address</th>
+    <th>Phone number</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @rosters.each do |roster| %>
+  <tr>
+    <td><%= roster.username %></td>
+    <td><%= roster.company_name %></td>
+    <td><%= roster.address %></td>
+    <td><%= roster.phone_number %></td>
+    <td><%= link_to 'Show', roster %></td>
+    <td><%= link_to 'Edit', edit_roster_path(roster) %></td>
+    <td><%= link_to 'Destroy', roster, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Roster', new_roster_path %>
