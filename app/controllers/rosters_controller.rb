@@ -90,7 +90,7 @@ class RostersController < ApplicationController
       end
       format.json do
         json = JSON.parse(params["json"])
-        if @roster.update_attributes(params["roster"])
+        if @roster.update_attributes(json["roster"])
           render :json => "OK"
         else
           render :json => "NG"
